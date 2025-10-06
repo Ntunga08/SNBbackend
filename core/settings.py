@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'products',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,10 @@ CORS_ALLOWED_ORIGINS =[
     "http://localhost:5173",
     "http://localhost:3000",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
 
 
 # Media files
